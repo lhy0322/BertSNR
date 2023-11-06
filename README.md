@@ -1,6 +1,6 @@
 # BertSNR
 
-![Image browser window](https://github.com/lhy0322/BertSNR/Graphical Abstract.JPG)
+![Image browser window](https://github.com/lhy0322/BertSNR/Figure.JPG)
 
 ## 1. Environment setup
 
