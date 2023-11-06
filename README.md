@@ -32,6 +32,42 @@ unzip 6-new-12w-0.zip
 ```
 
 ## 3. Model pipeline
+```
+BertSNR/
+├── Baseline/             
+│   ├── DeepLearning_Motif.py     # baseline(DeepSNR and D-AEDNet) motif generation
+│   ├── DeepLearning_Test.py      # baseline(DeepSNR and D-AEDNet) test
+│   ├── DeepLearning_Train.py     # baseline(DeepSNR and D-AEDNet) train
+│   ├── Matching_method.py        # baseline(Matching)
+│
+├── DNABERT/                # pre-trained model
+│   ├── 3-new-12w-0         # 3-mer model
+│   ├── ...
+│
+├── Dataset/               
+│   ├── ChIP-seq/           # 188 preprocessed datasets
+│   ├── JASPAR/             # original data
+│   ├── CreateDataset.py    # data process
+│
+├── Main/              
+│   ├── CrossValidToken.py  # cross-validation
+│   ├── GenerateMotif.py    # motif generation
+│   ├── Predict.py          # predict TFBS
+│   ├── TrainMultitask.py   # train model
+│
+├── Model/                  # model architecture 
+│   ├── BertSNR.py  
+│   ├── D_AEDNet.py   
+│   ├── DeepSNR.py        
+│
+└── Utils/               
+    ├── BertViz.py         # attention visualisation
+    ├── Metrics.py         
+    ├── MotifDiscovery.py  # motif discovery algorithm
+    ├── Shuffle.py         # dinucleotide frequencies shuffling 
+    ├── Visualization.py/  # attention visualisation
+
+```
 #### 3.1 Data processing
 Use "Dataset/CreateDataset.py" file to generate k-mer sequences files from 188 ChIP-seq datasets
 
